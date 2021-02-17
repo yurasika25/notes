@@ -3,4 +3,5 @@
     <string name="next">next</string>
     <string name="name">Введіть назву</string>
     <string name="todo">TODO</string>
+    <string name="my_notes">My notes</string>
 </resources>
