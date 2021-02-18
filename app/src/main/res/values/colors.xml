@@ -9,5 +9,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#F3EFEF</color>
     <color name="fon">#00BCD4</color>
+    <color name="my_fon">#F8F0DC</color>
+    <color name="my_fon_two">#4A4A4A</color>
+    <color name="grey_fon">#C8B1B1B1</color>
+    <color name="time">#C8E3E3E3</color>
+    <color name="card">#545454</color>
+
 
 </resources>

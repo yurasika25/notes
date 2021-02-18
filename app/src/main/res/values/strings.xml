@@ -3,5 +3,10 @@
     <string name="next">next</string>
     <string name="name">Введіть назву</string>
     <string name="todo">TODO</string>
-    <string name="my_notes">My notes</string>
+    <string name="empty">Empty</string>
+    <string name="hide">Приховати</string>
+    <string name="my_first_note">My first note</string>
+    <string name="notebook">Мої нотатки</string>
+    <string name="add_note">Додати нотатку</string>
+    <string name="add_photo"> Додати фото </string>
 </resources>

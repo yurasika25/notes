@@ -4,32 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fon"
+    android:background="@drawable/new_im"
     tools:context=".EditActivity">
-
-    <Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:title="@string/my_notes"
-        android:elevation="4dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginEnd="4dp"
         android:layout_marginStart="4dp"
+        android:layout_marginTop="0dp"
         android:autofillHints="username"
-        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="@android:color/transparent"
+        android:cursorVisible="true"
         android:ems="10"
-        android:layout_marginTop="5dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="0dp"
+        android:paddingTop="20dp"
         android:hint="@string/name"
         android:inputType="textPersonName"
-        android:padding="10dp"
+        android:maxLength="35"
+        android:maxLines="1"
+        android:textColor="@color/my_fon"
+        android:textColorHint="@color/grey_fon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
@@ -39,95 +36,73 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
         android:autofillHints="username"
-        android:background="@android:drawable/editbox_background"
+        android:background="@drawable/new_im"
         android:ems="10"
         android:gravity="fill_horizontal"
+        android:hint="@string/add_note"
         android:inputType="textMultiLine|textPersonName"
         android:padding="10dp"
+        android:textColor="@color/my_fon"
+        android:textColorHint="@color/grey_fon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTitle"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="LabelFor" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:backgroundTint="@color/white"
-        android:clickable="true"
-        android:onClick="onClickSave"
-        android:contentDescription="@string/todo"
-        android:focusable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.05dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/grey_fon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_baseline_save_alt_24" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btn_Image_Add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
-        android:layout_marginEnd="22dp"
-        android:clickable="true"
-        android:contentDescription="@string/todo"
-        android:focusable="true"
-        android:onClick="onClickAddImage"
-        app:backgroundTint="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_add" />
-
+    </TextView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
-        app:layout_constraintEnd_toEndOf="@+id/editTitle"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
-        <ImageButton
-            android:id="@+id/imBtnEdit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="75dp"
-            android:layout_marginTop="3dp"
-            android:backgroundTint="@color/fon"
-            android:contentDescription="@string/todo"
-            android:onClick="onClickChooseImage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_edit" />
 
-        <ImageButton
-            android:id="@+id/imBtnDelete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="75dp"
-            android:layout_marginTop="45dp"
-            android:backgroundTint="@color/fon"
-            android:contentDescription="@string/todo"
-            android:onClick="onClickDeleteImage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_delete" />
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:id="@+id/roundCardView"-->
+        <!--            android:layout_width="100dp"-->
+        <!--            android:layout_height="100dp"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:elevation="0dp"-->
+        <!--            app:cardCornerRadius="50dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/roundCardView"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:elevation="0dp"
-            app:cardCornerRadius="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@color/card"
+            app:cardCornerRadius="12dp"
+            android:elevation="12dp"
+            android:backgroundTint="@color/card"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -135,16 +110,56 @@
 
             <ImageView
                 android:id="@+id/imageMain"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:contentDescription="@string/todo"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/my_photo" />
+                app:srcCompat="@drawable/ic_image_texst" />
+            <ImageView
+                android:id="@+id/imBtnDelete"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="153dp"
+                android:layout_marginStart="355dp"
+
+                android:contentDescription="@string/todo"
+                android:onClick="onClickDeleteImage"
+                app:layout_constraintBottom_toBottomOf="@+id/imageMain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_delete"
+                app:tint="@color/my_fon" />
+            <ImageButton
+                android:id="@+id/imBtnEdit"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="153dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/todo"
+                android:onClick="onClickChooseImage"
+                app:srcCompat="@drawable/ic_edit" />
+
+
+
+
         </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/text_view_add"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="179dp"
+            android:layout_marginStart="174dp"
+            android:layout_marginTop="80dp"
+            android:textSize="25sp"
+            android:onClick="onClickChooseImage"
+            android:textColor="@color/my_fon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -154,7 +169,50 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="172dp" />
+        app:layout_constraintGuide_begin="201dp" />
 
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bt_text_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:onClick="onClickWriteText"
+        app:backgroundTint="@color/my_fon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_create" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_Image_Add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="84dp"
+        android:layout_marginEnd="12dp"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:onClick="onClickAddImage"
+        app:backgroundTint="@color/my_fon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_image" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:onClick="onClickSave"
+        app:backgroundTint="@color/my_fon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_save_alt_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

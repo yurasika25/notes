@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="6dp"
+    android:background="@color/card"
+    android:backgroundTint="@color/card"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="@string/my_first_note"
+            android:textSize="18sp"
+            android:paddingStart="15dp"
+            android:background="@drawable/ic_fon_two"
+            android:textColor="@color/my_fon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:text="@string/empty"
+            android:textSize="12sp"
+            android:gravity="end"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/time"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvTitle" />
+
+</androidx.cardview.widget.CardView>

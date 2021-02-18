@@ -3,43 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/fon"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent"
+    android:background="@drawable/new_im">
+
+
+    <Toolbar
+        android:id="@+id/toolbarOne"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/my_fon"
+        android:collapseIcon="@drawable/ic_notebook"
+        android:elevation="4dp"
+        android:title="@string/notebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute" />
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvEmpty"
+        android:textColor="@color/my_fon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/my_notes"
-        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+        android:text="@string/empty"
+        app:layout_constraintBottom_toBottomOf="@+id/rcViewId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="410dp"
-        android:layout_height="734dp"
+        android:id="@+id/rcViewId"
+        android:layout_width="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbarOne" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:backgroundTint="@color/white"
         android:clickable="true"
+        android:layout_margin="15dp"
         android:contentDescription="@string/todo"
         android:focusable="true"
         android:onClick="onClickNew"
+        app:backgroundTint="@color/my_fon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_add" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
